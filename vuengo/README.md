@@ -1,6 +1,12 @@
 # vuengo
 
-> A Vue.js project
+> A Vue.js And Django Rest Framework project, 
+My First Step into full stack dev
+
+
+
+
+Enjoy !! A To Do List WebApp
 
 ## Build Setup
 
