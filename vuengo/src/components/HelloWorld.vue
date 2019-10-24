@@ -68,6 +68,9 @@
             {{ task.description }}
           </div>
         </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" v-on:click="undoTask(task.id)">Undo</a>
+        </footer>
       </div>
     </div>
   </div>
@@ -148,6 +151,33 @@ export default {
         data: {
           description: description,
           status: 1
+        },
+        auth: {
+          username: 'marcuses',
+          password: 'opebello'
+        }
+      })
+    },
+    undoTask(task_id) {
+      let description = '';
+      for (let i = 0; i < this.tasks.length; i++) {
+        if (this.tasks[i].id == task_id && this.tasks[i].status == 1) {
+          this.tasks[i].status = 0
+          description = this.tasks[i].description
+
+          break
+
+        }
+      }
+      axios({
+        method: 'put',
+        url: 'http://127.0.0.1:8000/tasks/' + task_id + '/',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        data: {
+          description: description,
+          status: 0
         },
         auth: {
           username: 'marcuses',
