@@ -1,9 +1,27 @@
 # vuengo
-This is my first Vue & Django App
+
+> A Vue.js And Django Rest Framework project, 
+My First Step into full stack dev
 
 
-Road To be a Full Stack
-Using Vue.js & Django
 
 
-This is a To Do List Web App built with vue and django just to test out what i can build with it
+Enjoy !! A To Do List WebApp
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
